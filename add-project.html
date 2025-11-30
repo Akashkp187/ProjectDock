@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project - ProjectDock</title>
+    <meta name="description" content="Add a new project to your portfolio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo" id="nav-logo">
+                    <svg class="dock-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="dock-base" x="2" y="20" width="28" height="10" rx="2" fill="url(#dockGradient)"/>
+                        <rect class="project-box box-1" x="6" y="12" width="6" height="6" rx="1" fill="url(#boxGradient1)"/>
+                        <rect class="project-box box-2" x="13" y="10" width="6" height="6" rx="1" fill="url(#boxGradient2)"/>
+                        <rect class="project-box box-3" x="20" y="14" width="6" height="6" rx="1" fill="url(#boxGradient3)"/>
+                        <rect x="4" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="12" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="20" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="26" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <defs>
+                            <linearGradient id="dockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="nav-brand-text">ProjectDock</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="add-project.html" class="nav-link active">Add Project</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <span>🌙</span>
+            </button>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end)); padding: 8rem 1.5rem 4rem; margin-top: 70px;">
+        <div class="container">
+            <h1 class="text-center" style="color: white; margin-bottom: 1rem;" id="page-title">Add New Project</h1>
+            <p class="text-center" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto;" id="page-subtitle">Fill in the details to add your project to the portfolio</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="container" style="padding: 4rem 1.5rem; max-width: 800px;">
+        <form id="project-form" class="card" style="padding: 2.5rem;">
+            <!-- Project Name -->
+            <div class="form-group">
+                <label for="project-name" class="form-label">Project Name *</label>
+                <input type="text" 
+                       id="project-name" 
+                       class="form-input" 
+                       placeholder="Enter project name"
+                       required>
+            </div>
+
+            <!-- Developer Name -->
+            <div class="form-group">
+                <label for="developer-name" class="form-label">Developer Name</label>
+                <input type="text" 
+                       id="developer-name" 
+                       class="form-input" 
+                       placeholder="Enter developer/author name">
+                <small style="color: var(--text-light); font-size: 0.875rem; margin-top: 0.5rem; display: block;">
+                    Optional: Name of the developer or team who created this project
+                </small>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description" class="form-label">Description *</label>
+                <textarea id="description" 
+                          class="form-textarea" 
+                          placeholder="Describe your project..."
+                          required></textarea>
+            </div>
+
+            <!-- Category and Status Row -->
+            <div class="grid grid-2" style="gap: 1.5rem;">
+                <div class="form-group">
+                    <label for="category" class="form-label">Category *</label>
+                    <select id="category" class="form-select" required>
+                        <option value="">Select a category</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Mobile Development">Mobile Development</option>
+                        <option value="Design">Design</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status" class="form-label">Status *</label>
+                    <select id="status" class="form-select" required>
+                        <option value="">Select status</option>
+                        <option value="Planned">Planned</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="On Hold">On Hold</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Technology Stack -->
+            <div class="form-group">
+                <label for="technologies" class="form-label">Technology Stack</label>
+                <input type="text" 
+                       id="technologies" 
+                       class="form-input" 
+                       placeholder="e.g., React, Node.js, MongoDB (comma-separated)">
+                <small style="color: var(--text-light); font-size: 0.875rem; margin-top: 0.5rem; display: block;">
+                    Separate technologies with commas
+                </small>
+            </div>
+
+            <!-- Project Tags -->
+            <div class="form-group">
+                <label for="tags" class="form-label">Project Tags</label>
+                <input type="text" 
+                       id="tags" 
+                       class="form-input" 
+                       placeholder="e.g., frontend, portfolio, open-source (comma-separated)">
+                <small style="color: var(--text-light); font-size: 0.875rem; margin-top: 0.5rem; display: block;">
+                    Add tags to organize and filter projects. Separate with commas.
+                </small>
+                <div id="tags-preview" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;"></div>
+            </div>
+
+            <!-- Start Date -->
+            <div class="form-group">
+                <label for="start-date" class="form-label">Start Date</label>
+                <input type="date" 
+                       id="start-date" 
+                       class="form-input">
+            </div>
+
+            <!-- Links Row -->
+            <div class="grid grid-2" style="gap: 1.5rem;">
+                <div class="form-group">
+                    <label for="github-link" class="form-label">GitHub Link</label>
+                    <input type="url" 
+                           id="github-link" 
+                           class="form-input" 
+                           placeholder="https://github.com/username/project">
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-link" class="form-label">Live Demo Link</label>
+                    <input type="url" 
+                           id="demo-link" 
+                           class="form-input" 
+                           placeholder="https://yourproject.com">
+                </div>
+            </div>
+
+            <!-- Thumbnail Upload -->
+            <div class="form-group">
+                <label class="form-label">Project Thumbnail</label>
+                <div class="file-upload">
+                    <input type="file" 
+                           id="thumbnail" 
+                           class="file-upload-input" 
+                           accept="image/*">
+                    <label for="thumbnail" class="file-upload-label">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📷</div>
+                        <div style="font-weight: 600; margin-bottom: 0.5rem;">Click to upload thumbnail</div>
+                        <div style="color: var(--text-light); font-size: 0.875rem;">PNG, JPG up to 5MB</div>
+                    </label>
+                    <img id="thumbnail-preview" class="file-preview" alt="Preview">
+                </div>
+            </div>
+
+            <!-- Submit Buttons -->
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary btn-flex">
+                    <span id="submit-text">Add Project</span>
+                    <span id="submit-loading" style="display: none;">Saving...</span>
+                </button>
+                <a href="projects.html" class="btn btn-primary btn-flex">Cancel</a>
+            </div>
+            <input type="hidden" id="edit-project-id">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ProjectDock</h4>
+                    <p>Organize, showcase, and track your projects with ease.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="add-project.html">Add Project</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProjectDock. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        const form = document.getElementById('project-form');
+        const thumbnailInput = document.getElementById('thumbnail');
+        const thumbnailPreview = document.getElementById('thumbnail-preview');
+        const editProjectId = document.getElementById('edit-project-id');
+        let thumbnailDataUrl = '';
+        let isEditMode = false;
+        let existingThumbnail = null; // Store existing thumbnail when editing
+
+        // Check if we're in edit mode
+        const urlParams = new URLSearchParams(window.location.search);
+        const editId = urlParams.get('edit');
+        
+        if (editId) {
+            isEditMode = true;
+            const project = ProjectDock.ProjectStorage.getProject(editId);
+            if (project) {
+                // Update page title
+                document.getElementById('page-title').textContent = 'Edit Project';
+                document.getElementById('page-subtitle').textContent = 'Update your project details';
+                document.getElementById('submit-text').textContent = 'Update Project';
+                
+                // Populate form
+                document.getElementById('project-name').value = project.name || '';
+                document.getElementById('developer-name').value = project.developerName || '';
+                document.getElementById('description').value = project.description || '';
+                document.getElementById('category').value = project.category || '';
+                document.getElementById('status').value = project.status || '';
+                document.getElementById('technologies').value = (project.technologies || []).join(', ');
+                document.getElementById('tags').value = (project.tags || []).join(', ');
+                document.getElementById('start-date').value = project.startDate || '';
+                document.getElementById('github-link').value = project.githubLink || '';
+                document.getElementById('demo-link').value = project.demoLink || '';
+                editProjectId.value = editId;
+                
+                // Update tags preview
+                updateTagsPreview();
+                
+                // Load thumbnail if exists
+                if (project.thumbnail && project.thumbnail.trim()) {
+                    existingThumbnail = project.thumbnail;
+                    thumbnailDataUrl = project.thumbnail;
+                    thumbnailPreview.src = project.thumbnail;
+                    thumbnailPreview.classList.add('show');
+                }
+                
+                // Update tags preview
+                if (typeof updateTagsPreview === 'function') {
+                    updateTagsPreview();
+                }
+            } else {
+                ProjectDock.Toast.show('Project not found', 'error');
+                setTimeout(() => {
+                    window.location.href = 'projects.html';
+                }, 2000);
+            }
+        }
+
+        // Handle thumbnail preview
+        thumbnailInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                if (file.size > 5 * 1024 * 1024) {
+                    ProjectDock.Toast.show('File size must be less than 5MB', 'error');
+                    thumbnailInput.value = '';
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    if (event.target.result && event.target.result.trim()) {
+                        const dataUrl = event.target.result.trim();
+                        // Verify it's a valid data URL
+                        if (dataUrl.startsWith('data:image/')) {
+                            thumbnailDataUrl = dataUrl;
+                            
+                            // Display preview
+                            thumbnailPreview.src = thumbnailDataUrl;
+                            thumbnailPreview.classList.add('show');
+                            ProjectDock.Toast.show('Image loaded successfully!', 'success', 2000);
+                        } else {
+                            ProjectDock.Toast.show('Invalid image format', 'error');
+                            thumbnailInput.value = '';
+                        }
+                    } else {
+                        ProjectDock.Toast.show('Failed to load image', 'error');
+                    }
+                };
+                reader.onerror = () => {
+                    ProjectDock.Toast.show('Error reading image file', 'error');
+                    thumbnailInput.value = '';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Handle tags input
+        const tagsInput = document.getElementById('tags');
+        const tagsPreview = document.getElementById('tags-preview');
+        
+        function updateTagsPreview() {
+            const tagsText = tagsInput.value.trim();
+            const tags = tagsText ? tagsText.split(',').map(t => t.trim()).filter(t => t) : [];
+            
+            tagsPreview.innerHTML = '';
+            if (tags.length > 0) {
+                tags.forEach(tag => {
+                    const tagSpan = document.createElement('span');
+                    tagSpan.style.cssText = 'padding: 0.25rem 0.75rem; background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end)); color: white; border-radius: var(--radius-sm); font-size: 0.85rem; display: inline-block;';
+                    tagSpan.textContent = tag;
+                    tagsPreview.appendChild(tagSpan);
+                });
+            }
+        }
+        
+        tagsInput.addEventListener('input', updateTagsPreview);
+
+        // Handle form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Validate form
+            if (!ProjectDock.FormValidator.validate(form)) {
+                ProjectDock.Toast.show('Please fill in all required fields', 'error');
+                return;
+            }
+
+            // Get form values
+            const categoryValue = document.getElementById('category').value;
+            const statusValue = document.getElementById('status').value;
+            
+            // Ensure category and status are not empty
+            if (!categoryValue || !statusValue) {
+                ProjectDock.Toast.show('Please select both category and status', 'error');
+                return;
+            }
+            
+            const projectData = {
+                name: document.getElementById('project-name').value.trim(),
+                developerName: document.getElementById('developer-name').value.trim() || null,
+                description: document.getElementById('description').value.trim(),
+                category: categoryValue,
+                status: statusValue,
+                technologies: document.getElementById('technologies').value
+                    .split(',')
+                    .map(t => t.trim())
+                    .filter(t => t),
+                tags: document.getElementById('tags').value
+                    .split(',')
+                    .map(t => t.trim())
+                    .filter(t => t),
+                startDate: document.getElementById('start-date').value || null,
+                githubLink: document.getElementById('github-link').value.trim() || null,
+                demoLink: document.getElementById('demo-link').value.trim() || null,
+                // Preserve existing thumbnail if no new one is uploaded during edit
+                thumbnail: (thumbnailDataUrl && thumbnailDataUrl.trim() && thumbnailDataUrl !== existingThumbnail) 
+                    ? thumbnailDataUrl 
+                    : (isEditMode && existingThumbnail ? existingThumbnail : (thumbnailDataUrl && thumbnailDataUrl.trim() ? thumbnailDataUrl : null))
+            };
+
+            // Show loading state
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submit-text');
+            const submitLoading = document.getElementById('submit-loading');
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline';
+            submitBtn.disabled = true;
+
+            // Simulate API delay for better UX
+            setTimeout(() => {
+                let project;
+                
+                if (isEditMode && editProjectId.value) {
+                    // Update existing project
+                    console.log('Updating project with ID:', editProjectId.value);
+                    console.log('Project data:', projectData);
+                    project = ProjectDock.ProjectStorage.updateProject(editProjectId.value, projectData);
+                    if (!project) {
+                        console.error('Update failed - project returned null');
+                        ProjectDock.Toast.show('Failed to update project. Please try again.', 'error');
+                        submitText.style.display = 'inline';
+                        submitLoading.style.display = 'none';
+                        submitBtn.disabled = false;
+                        return;
+                    }
+                    console.log('Project updated successfully:', project);
+                    ProjectDock.Toast.show('Project updated successfully!', 'success', 3000);
+                } else {
+                    // Create new project
+                    project = ProjectDock.ProjectStorage.addProject(projectData);
+                    if (!project || !project.id) {
+                        ProjectDock.Toast.show('Failed to add project. Check console for details.', 'error');
+                        submitText.style.display = 'inline';
+                        submitLoading.style.display = 'none';
+                        submitBtn.disabled = false;
+                        return;
+                    }
+                    ProjectDock.Toast.show('Project added successfully!', 'success', 3000);
+                }
+
+                // Verify project was saved and log thumbnail info
+                const savedProjects = ProjectDock.ProjectStorage.getProjects();
+                const savedProject = savedProjects.find(p => p.id === project.id);
+                if (!savedProject) {
+                    ProjectDock.Toast.show('Project saved but could not be verified', 'warning');
+                } else {
+                    // Debug: Log thumbnail info
+                    const thumb = savedProject.thumbnail;
+                    const isBase64 = thumb && thumb.startsWith('data:image');
+                    const base64Match = thumb ? thumb.match(/^data:image\/(\w+);base64,(.+)$/) : null;
+                    console.log('Project saved:', {
+                        id: savedProject.id,
+                        name: savedProject.name,
+                        hasThumbnail: !!thumb,
+                        thumbnailLength: thumb ? thumb.length : 0,
+                        isBase64: isBase64,
+                        base64DataLength: base64Match ? base64Match[2].length : 0,
+                        thumbnailPreview: thumb ? thumb.substring(0, 80) + '...' : 'none',
+                        thumbnailEnd: thumb ? '...' + thumb.substring(thumb.length - 20) : 'none'
+                    });
+                    
+                    // Verify thumbnail integrity
+                    if (thumb && isBase64) {
+                        if (!base64Match || !base64Match[2] || base64Match[2].length < 100) {
+                            console.error('WARNING: Thumbnail base64 data appears incomplete or corrupted!');
+                        } else {
+                            console.log('✓ Thumbnail base64 data appears valid');
+                        }
+                    }
+                }
+
+                // Reset form only if not in edit mode
+                if (!isEditMode) {
+                    form.reset();
+                    thumbnailPreview.classList.remove('show');
+                    thumbnailDataUrl = '';
+                }
+
+                // Reset button state
+                submitText.style.display = 'inline';
+                submitLoading.style.display = 'none';
+                submitBtn.disabled = false;
+
+                // Verify one more time before redirect
+                const finalCheck = ProjectDock.ProjectStorage.getProjects();
+                console.log('Final verification - Total projects in localStorage:', finalCheck.length);
+                const updatedProject = finalCheck.find(p => p.id === project.id);
+                console.log('Project exists:', updatedProject ? 'YES' : 'NO');
+                if (updatedProject) {
+                    console.log('Updated project data:', updatedProject);
+                    console.log('Project name:', updatedProject.name);
+                    console.log('Project developer:', updatedProject.developerName);
+                    console.log('Project description:', updatedProject.description);
+                } else {
+                    console.error('CRITICAL: Updated project not found in localStorage!');
+                    ProjectDock.Toast.show('Update may have failed. Please check the projects page.', 'error');
+                    submitText.style.display = 'inline';
+                    submitLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                    return;
+                }
+                
+                // Redirect after short delay - use window.location.replace to avoid back button issues
+                setTimeout(() => {
+                    if (project && project.id) {
+                        // Force reload by adding timestamp to prevent cache
+                        window.location.replace(`project-detail.html?id=${project.id}&t=${Date.now()}`);
+                    } else {
+                        console.error('Project ID is missing, redirecting to projects page');
+                        ProjectDock.Toast.show('Update completed but redirect failed. Please navigate manually.', 'warning');
+                        setTimeout(() => {
+                            window.location.href = 'projects.html';
+                        }, 2000);
+                    }
+                }, 1500);
+            }, 800);
+        });
+    </script>
+</body>
+</html>
+

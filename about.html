@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - ProjectDock</title>
+    <meta name="description" content="Learn about ProjectDock platform">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo" id="nav-logo">
+                    <svg class="dock-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="dock-base" x="2" y="20" width="28" height="10" rx="2" fill="url(#dockGradient)"/>
+                        <rect class="project-box box-1" x="6" y="12" width="6" height="6" rx="1" fill="url(#boxGradient1)"/>
+                        <rect class="project-box box-2" x="13" y="10" width="6" height="6" rx="1" fill="url(#boxGradient2)"/>
+                        <rect class="project-box box-3" x="20" y="14" width="6" height="6" rx="1" fill="url(#boxGradient3)"/>
+                        <rect x="4" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="12" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="20" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="26" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <defs>
+                            <linearGradient id="dockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="nav-brand-text">ProjectDock</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="add-project.html" class="nav-link">Add Project</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <span>🌙</span>
+            </button>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end)); padding: 8rem 1.5rem 4rem; margin-top: 70px;">
+        <div class="container">
+            <h1 class="text-center" style="color: white; margin-bottom: 1rem;">About ProjectDock</h1>
+            <p class="text-center" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto;">The modern platform for managing your creative work</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="container" style="padding: 4rem 1.5rem;">
+        <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 class="fade-on-scroll" style="margin-bottom: 1.5rem;">Our Mission</h2>
+            <p class="fade-on-scroll" style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                ProjectDock was created to help developers, designers, and creators organize, showcase, and track their projects in one beautiful, intuitive platform. We believe that everyone deserves a professional way to present their work and build their portfolio.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="background: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container">
+            <h2 class="text-center mb-xl fade-on-scroll">Key Features</h2>
+            <div class="grid grid-3">
+                <div class="card fade-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center; animation: pulse 2s ease-in-out infinite;">📊</div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Project Organization</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">
+                        Organize your projects by category, status, and technology stack. Keep everything in one place.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center; animation: pulse 2s ease-in-out infinite 0.2s;">🎨</div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Beautiful Showcase</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">
+                        Create stunning project portfolios with beautiful cards, galleries, and detailed views.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center; animation: pulse 2s ease-in-out infinite 0.4s;">📈</div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Progress Tracking</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">
+                        Track your project status and timeline. Monitor your progress and stay organized.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center; animation: pulse 2s ease-in-out infinite 0.6s;">🔍</div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Smart Search</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">
+                        Quickly find projects using powerful search and filter capabilities.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center; animation: pulse 2s ease-in-out infinite 0.8s;">📱</div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Fully Responsive</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">
+                        Access your projects from any device. Beautiful on desktop, tablet, and mobile.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center; animation: pulse 2s ease-in-out infinite 1s;">💾</div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Local Storage</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">
+                        Your data is stored locally in your browser. Fast, secure, and always accessible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="container" style="padding: 4rem 1.5rem;">
+        <div class="grid grid-2" style="gap: 3rem; align-items: center;">
+            <div class="fade-on-scroll">
+                <h2 style="margin-bottom: 1.5rem;">Our Vision</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                    We envision a world where every creator has the tools they need to showcase their work professionally. ProjectDock is designed to be simple yet powerful, beautiful yet functional.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                    Whether you're a student building your portfolio, a freelancer showcasing your work, or a professional tracking your projects, ProjectDock adapts to your needs.
+                </p>
+                <a href="add-project.html" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="fade-on-scroll">
+                <div class="card" style="padding: 3rem; text-align: center; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));">
+                    <div style="font-size: 5rem; margin-bottom: 1rem;">🚀</div>
+                    <h3 style="margin-bottom: 1rem;">Start Building</h3>
+                    <p style="color: var(--text-secondary);">
+                        Create your first project and start building your professional portfolio today.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section style="background: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container">
+            <h2 class="text-center mb-xl fade-on-scroll">Why ProjectDock?</h2>
+            <div class="grid grid-2" style="max-width: 900px; margin: 0 auto;">
+                <div class="card fade-on-scroll">
+                    <h3 style="margin-bottom: 1rem;">✨ Modern Design</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Built with modern web technologies and design principles. Beautiful animations, smooth transitions, and a delightful user experience.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <h3 style="margin-bottom: 1rem;">⚡ Fast & Lightweight</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        No heavy frameworks or dependencies. Pure vanilla JavaScript for maximum performance and speed.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <h3 style="margin-bottom: 1rem;">🔒 Privacy First</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        All your data stays in your browser. No servers, no tracking, no data collection. Your projects, your privacy.
+                    </p>
+                </div>
+                <div class="card fade-on-scroll">
+                    <h3 style="margin-bottom: 1rem;">🎯 Easy to Use</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Intuitive interface that anyone can use. Add projects in minutes, organize effortlessly, showcase beautifully.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container" style="padding: 4rem 1.5rem; text-align: center;">
+        <div class="card fade-on-scroll" style="max-width: 600px; margin: 0 auto; padding: 3rem;">
+            <h2 style="margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Join thousands of creators using ProjectDock to organize and showcase their work.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="add-project.html" class="btn btn-primary">Add Your First Project</a>
+                <a href="projects.html" class="btn btn-primary">Browse Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ProjectDock</h4>
+                    <p>Organize, showcase, and track your projects with ease.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="add-project.html">Add Project</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProjectDock. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ProjectDock.ScrollAnimations.init();
+        });
+    </script>
+</body>
+</html>
+

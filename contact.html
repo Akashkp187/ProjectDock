@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Settings - ProjectDock</title>
+    <meta name="description" content="Contact us or adjust your settings">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo" id="nav-logo">
+                    <svg class="dock-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="dock-base" x="2" y="20" width="28" height="10" rx="2" fill="url(#dockGradient)"/>
+                        <rect class="project-box box-1" x="6" y="12" width="6" height="6" rx="1" fill="url(#boxGradient1)"/>
+                        <rect class="project-box box-2" x="13" y="10" width="6" height="6" rx="1" fill="url(#boxGradient2)"/>
+                        <rect class="project-box box-3" x="20" y="14" width="6" height="6" rx="1" fill="url(#boxGradient3)"/>
+                        <rect x="4" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="12" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="20" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="26" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <defs>
+                            <linearGradient id="dockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="nav-brand-text">ProjectDock</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="add-project.html" class="nav-link">Add Project</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <span>🌙</span>
+            </button>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end)); padding: 8rem 1.5rem 4rem; margin-top: 70px;">
+        <div class="container">
+            <h1 class="text-center" style="color: white; margin-bottom: 1rem;">Contact & Settings</h1>
+            <p class="text-center" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto;">Get in touch or customize your experience</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="container" style="padding: 4rem 1.5rem;">
+        <div class="grid grid-2" style="gap: 3rem; max-width: 1200px; margin: 0 auto;">
+            <!-- Contact Form -->
+            <div class="card fade-on-scroll">
+                <h2 style="margin-bottom: 1.5rem;">Send us a Message</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Your Name *</label>
+                        <input type="text" 
+                               id="contact-name" 
+                               class="form-input" 
+                               placeholder="Enter your name"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email Address *</label>
+                        <input type="email" 
+                               id="contact-email" 
+                               class="form-input" 
+                               placeholder="your.email@example.com"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject" class="form-label">Subject *</label>
+                        <input type="text" 
+                               id="contact-subject" 
+                               class="form-input" 
+                               placeholder="What's this about?"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">Message *</label>
+                        <textarea id="contact-message" 
+                                  class="form-textarea" 
+                                  placeholder="Tell us what's on your mind..."
+                                  rows="6"
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span id="submit-text">Send Message</span>
+                        <span id="submit-loading" style="display: none;">Sending...</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Settings Panel -->
+            <div class="fade-on-scroll">
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h2 style="margin-bottom: 1.5rem;">Settings</h2>
+                    
+                    <!-- Theme Toggle -->
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <label style="font-weight: 600;">Dark Mode</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="theme-toggle-setting">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.875rem;">Switch between light and dark theme</p>
+                    </div>
+
+                    <!-- Notifications Toggle -->
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <label style="font-weight: 600;">Notifications</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="notifications-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.875rem;">Enable browser notifications</p>
+                    </div>
+
+                    <!-- Data Management -->
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                        <h4 style="margin-bottom: 1rem;">Data Management</h4>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <button id="export-data" class="btn btn-secondary btn-full">
+                                📥 Export Data
+                            </button>
+                            <button id="import-data" class="btn btn-secondary btn-full">
+                                📤 Import Data
+                            </button>
+                            <button id="clear-data" class="btn btn-danger btn-full">
+                                🗑️ Clear All Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Connect With Us</h3>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#" class="social-link" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.5rem; transition: all var(--transition-base);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0; transition: transform 0.3s ease;">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.5rem; transition: all var(--transition-base);">
+                            <span>💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link" style="padding: 0.75rem 1.5rem; background: var(--bg-primary); border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.5rem; transition: all var(--transition-base);">
+                            <span>📧</span>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clear Data Confirmation Modal -->
+    <div id="clear-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 style="margin-bottom: 1rem;">Clear All Data</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Are you sure you want to delete all your projects? This action cannot be undone.
+            </p>
+            <div style="display: flex; gap: 1rem;">
+                <button id="confirm-clear" class="btn btn-danger btn-flex">
+                    Yes, Clear All
+                </button>
+                <button id="cancel-clear" class="btn btn-secondary btn-flex">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ProjectDock</h4>
+                    <p>Organize, showcase, and track your projects with ease.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="add-project.html">Add Project</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProjectDock. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!ProjectDock.FormValidator.validate(e.target)) {
+                return;
+            }
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submit-text');
+            const submitLoading = document.getElementById('submit-loading');
+
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline';
+            submitBtn.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                ProjectDock.Toast.show('Message sent successfully! (Note: This is a demo - no actual email is sent)', 'success');
+                e.target.reset();
+                submitText.style.display = 'inline';
+                submitLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+
+        // Theme toggle setting
+        const themeToggleSetting = document.getElementById('theme-toggle-setting');
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        themeToggleSetting.checked = currentTheme === 'dark';
+
+        themeToggleSetting.addEventListener('change', (e) => {
+            ProjectDock.Theme.setTheme(e.target.checked ? 'dark' : 'light');
+        });
+
+        // Notifications toggle
+        const notificationsToggle = document.getElementById('notifications-toggle');
+        const notificationsEnabled = localStorage.getItem('projectdock_notifications') !== 'false';
+        notificationsToggle.checked = notificationsEnabled;
+
+        notificationsToggle.addEventListener('change', (e) => {
+            localStorage.setItem('projectdock_notifications', e.target.checked);
+            ProjectDock.Toast.show(
+                e.target.checked ? 'Notifications enabled' : 'Notifications disabled',
+                'info'
+            );
+        });
+
+        // Export data
+        document.getElementById('export-data').addEventListener('click', () => {
+            const projects = ProjectDock.ProjectStorage.getProjects();
+            const dataStr = JSON.stringify(projects, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `projectdock-export-${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+            URL.revokeObjectURL(url);
+            ProjectDock.Toast.show('Data exported successfully!', 'success');
+        });
+
+        // Import data
+        document.getElementById('import-data').addEventListener('click', () => {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'application/json';
+            input.onchange = (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        const importedProjects = JSON.parse(event.target.result);
+                        if (Array.isArray(importedProjects)) {
+                            ProjectDock.ProjectStorage.saveProjects(importedProjects);
+                            ProjectDock.Toast.show('Data imported successfully!', 'success');
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 1500);
+                        } else {
+                            throw new Error('Invalid data format');
+                        }
+                    } catch (error) {
+                        ProjectDock.Toast.show('Failed to import data. Please check the file format.', 'error');
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        });
+
+        // Clear data
+        document.getElementById('clear-data').addEventListener('click', () => {
+            ProjectDock.Modal.open('clear-modal');
+        });
+
+        document.getElementById('cancel-clear').addEventListener('click', () => {
+            ProjectDock.Modal.close('clear-modal');
+        });
+
+        document.getElementById('confirm-clear').addEventListener('click', () => {
+            ProjectDock.ProjectStorage.saveProjects([]);
+            ProjectDock.Toast.show('All data cleared successfully', 'success');
+            ProjectDock.Modal.close('clear-modal');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+
+        // Social links hover effect
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+                this.style.boxShadow = 'var(--shadow-md)';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            ProjectDock.ScrollAnimations.init();
+        });
+    </script>
+
+    <style>
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e0;
+            border: 2px solid #a0aec0;
+            transition: var(--transition-base);
+            border-radius: 26px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] .toggle-slider {
+            background-color: #4a5568;
+            border-color: #718096;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 2px;
+            background-color: white;
+            transition: var(--transition-base);
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-switch input:checked + .toggle-slider {
+            background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+            border-color: var(--primary-gradient-start);
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+        }
+
+        .toggle-switch input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle-switch:hover .toggle-slider {
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .toggle-switch input:checked + .toggle-slider:hover {
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.5), 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        /* Social link Twitter icon hover effect */
+        .social-link:hover svg {
+            transform: rotate(15deg) scale(1.1);
+            color: #1DA1F2;
+        }
+
+        .social-link:first-child:hover {
+            background: linear-gradient(135deg, rgba(29, 161, 242, 0.1), rgba(29, 161, 242, 0.05));
+        }
+    </style>
+</body>
+</html>
+
