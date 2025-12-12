@@ -1,1 +1,36 @@
-
+<span class="nav-logo" id="nav-logo">
+                    <svg class="dock-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dock Platform Base -->
+                        <rect class="dock-base" x="2" y="20" width="28" height="10" rx="2" fill="url(#dockGradient)"/>
+                        <!-- Project Box 1 -->
+                        <rect class="project-box box-1" x="6" y="12" width="6" height="6" rx="1" fill="url(#boxGradient1)"/>
+                        <!-- Project Box 2 -->
+                        <rect class="project-box box-2" x="13" y="10" width="6" height="6" rx="1" fill="url(#boxGradient2)"/>
+                        <!-- Project Box 3 -->
+                        <rect class="project-box box-3" x="20" y="14" width="6" height="6" rx="1" fill="url(#boxGradient3)"/>
+                        <!-- Dock Support Pillars -->
+                        <rect x="4" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="12" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="20" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <rect x="26" y="24" width="2" height="6" fill="url(#dockGradient)"/>
+                        <!-- Gradients -->
+                        <defs>
+                            <linearGradient id="dockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="boxGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
